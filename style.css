@@ -1,0 +1,124 @@
+/* General styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 15px; /* Helps on small screens */
+}
+
+/* Card container */
+.container {
+  background: #fff;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 350px;
+  max-width: 100%; /* Prevents overflow */
+  transition: 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+/* Title */
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Search bar */
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  font-size: 14px;
+  min-width: 0; /* prevents overflow */
+}
+
+.search-box button {
+  padding: 10px 15px;
+  border: none;
+  background: #007BFF;
+  color: white;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.search-box button:hover {
+  background: #0056b3;
+}
+
+/* Weather card */
+.weather {
+  margin-top: 20px;
+}
+
+.weather img {
+  width: 100px;
+  margin: 10px 0;
+}
+
+.weather h3 {
+  margin: 10px 0 5px;
+}
+
+.weather p {
+  margin: 5px 0;
+  color: #444;
+  font-size: 15px;
+}
+
+/* Error message */
+.error {
+  color: red;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* 🔹 Responsive design */
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .search-box {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-box input,
+  .search-box button {
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
+  .weather img {
+    width: 80px;
+  }
+
+  .weather p {
+    font-size: 14px;
+  }
+}
